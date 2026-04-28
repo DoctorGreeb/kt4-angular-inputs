@@ -1,3 +1,21 @@
 import { Routes } from '@angular/router';
+import { IndexPage } from './pages/index-page/index-page';
+import { UsersPage } from './pages/users-page/users-page';
+import { AboutPage } from './pages/about-page/about-page';
+import { TodosPage } from './pages/todos-page/todos-page';
+import { SingleUserPage } from './pages/single-user-page/single-user-page';
+import { SingleUserPosts } from './pages/single-user-posts/single-user-posts';
+import { SendInfoForm } from './pages/send-info-form/send-info-form';
 
-export const routes: Routes = [];
+export const routes: Routes = [
+
+  { path: '', component: IndexPage },
+  { path: 'users', component: UsersPage },
+  { path: 'about', component: AboutPage },
+  { path: 'todos', component: TodosPage },
+  { path: 'users/:id', component: SingleUserPage },
+  { path: 'users/:id/posts', component: SingleUserPosts },
+  { path: 'form', component: SendInfoForm },
+
+];
+

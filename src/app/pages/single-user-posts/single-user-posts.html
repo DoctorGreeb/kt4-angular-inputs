@@ -1,0 +1,8 @@
+<p>single-user-posts works!</p>
+
+<div class="max-w-150 mx-auto border border-amber-500 p-10">
+  @if(post()) {
+    <p>{{ post()?.title }}</p>
+    <p>{{ post()?.body }}</p>
+  }
+</div>

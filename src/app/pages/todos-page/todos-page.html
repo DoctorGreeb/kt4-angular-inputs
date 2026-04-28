@@ -1,0 +1,37 @@
+<h2>Список задач</h2>
+
+<div>
+  <input [(ngModel)]="newTodo" type="text" placeholder="Новая задача" />
+  <button (click)="addTodo()">Добавить задачу</button>
+
+  <h3>Мои задачи</h3>
+
+  <div>
+    @for (todo of todos(); track todo.id) {
+      <div class="flex gap-x-3 items-center">
+        <span>{{ todo.id }}</span>
+        <span>{{ todo.text }}</span>
+
+        <input type="checkbox" />
+
+        <div class="flex gap-x-3 buttons">
+          <button (click)="toggleEdit(todo)">Редактировать</button>
+          <button (click)="delTodo(todo.id)">Удалить</button>
+        </div>
+
+        @if (editingId() === todo.id) {
+          <input
+            class="edit"
+            type="text"
+            [(ngModel)]="editText"
+            placeholder="Новый текст" />
+
+          <button (click)="saveEdit(todo.id)">Сохранить</button>
+          <button (click)="cancelEdit()">Отмена</button>
+        }
+
+
+      </div>
+    }
+  </div>
+</div>

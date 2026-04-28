@@ -1,0 +1,8 @@
+<p>collapse works!</p>
+
+<div>
+  <button (click)="toggleShow()">{{title()}}</button>
+  @if (show()) {
+  <p >{{text()}}</p>
+  }
+</div>

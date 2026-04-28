@@ -1,0 +1,9 @@
+<p>users-posts works!</p>
+<div>
+  @for (post of posts(); track post.id) {
+    <a routerLink="/posts/{{post.id}}">
+      <p>{{ post.title }}</p>
+      <p>{{ post.body }}</p>
+    </a>
+  }
+</div>

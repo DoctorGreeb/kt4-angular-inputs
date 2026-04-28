@@ -1,0 +1,9 @@
+.buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+.items-center {
+  height: 50px;
+  border: 1px solid black;
+  gap: 1rem;
+}
