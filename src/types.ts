@@ -15,3 +15,10 @@ interface Post {
   title: string;
   body: string;
 }
+
+interface FormData {
+  name: string;
+  phone: string;
+  email: string;
+  date: string;
+}
