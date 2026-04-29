@@ -1,0 +1,24 @@
+.buttons-resume {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 10px;
+  gap: 1rem;
+
+}
+header {
+  width: 100%;
+  background-color: rgb(215, 215, 215);
+  padding: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+a:hover {
+  color: rgb(255, 83, 83);
+}
+a:visited {
+  text-decoration: none;
+  color: black;
+}

@@ -6,6 +6,8 @@ import { TodosPage } from './pages/todos-page/todos-page';
 import { SingleUserPage } from './pages/single-user-page/single-user-page';
 import { SingleUserPosts } from './pages/single-user-posts/single-user-posts';
 import { SendInfoForm } from './pages/send-info-form/send-info-form';
+import { ResumeHome } from './pages/resume-home/resume-home';
+import { ResumeWork } from './pages/resume-work/resume-work';
 
 export const routes: Routes = [
 
@@ -16,6 +18,8 @@ export const routes: Routes = [
   { path: 'users/:id', component: SingleUserPage },
   { path: 'users/:id/posts', component: SingleUserPosts },
   { path: 'form', component: SendInfoForm },
+  { path: 'resume', component: ResumeHome },
+  { path: 'resume/works', component: ResumeWork },
 
 ];
 

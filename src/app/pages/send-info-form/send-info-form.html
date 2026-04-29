@@ -29,7 +29,7 @@
     placeholder="Your Name"
     [(value)]="formData.name">
   </app-send-info-input>
-  
+
   <app-send-info-input
     id="phone"
     label="Phone"
@@ -37,7 +37,7 @@
     placeholder="8 (123) 456-78-90"
     [(value)]="formData.phone">
   </app-send-info-input>
-  
+
   <app-send-info-input
     id="email"
     label="Email"
@@ -45,7 +45,7 @@
     placeholder="Your Email"
     [(value)]="formData.email">
   </app-send-info-input>
-  
+
   <app-send-info-input
     id="date"
     label="Date"
@@ -53,10 +53,11 @@
     placeholder="Select date"
     [(value)]="formData.date">
   </app-send-info-input>
+
+
 </form>
 
 </body>
-
 
 <footer class="footer-text">
   <app-send-info-button
@@ -65,3 +66,4 @@
     (clicked)="onSubmit()">
   </app-send-info-button>
 </footer>
+
