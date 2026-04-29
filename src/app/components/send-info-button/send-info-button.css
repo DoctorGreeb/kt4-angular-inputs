@@ -2,17 +2,18 @@
   padding: 14px 40px;
   font-size: 20px;
   font-weight: 600;
-  background-color: #007bff;
+    background: linear-gradient(to bottom, #8a00cc, #fb00ff);
   color: white;
   border: none;
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.3s ease;
   min-width: 180px;
+  border-radius: 25px;
+
 }
 
 .custom-button:hover:not(:disabled) {
-  background-color: #0056b3;
   transform: translateY(-2px);
 }
 

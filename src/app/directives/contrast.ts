@@ -16,12 +16,17 @@ function hexToRgb(hex: string) {
   selector: '[appContrast]',
 })
 export class Contrast {
+  someVariable: any;
   constructor() {
     effect(() => {
       console.log('dasdaad')
       const rgb = hexToRgb(this.utilityService.bodyColor());
       this.textColor = `rgb(${255 - rgb!.r}, ${255 - rgb!.g}, ${255 - rgb!.b})`;
     });
+    if (this.someVariable && this.someVariable.r !== undefined) {
+      console.log(this.someVariable.r);
+    }
+    
   }
 
   private utilityService = inject(UtilityService);

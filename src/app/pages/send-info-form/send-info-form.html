@@ -1,12 +1,14 @@
-<header class="header-text" appContrast>
-Get an Estimate for Workspace
-</header>
+<div class="header-wrapper">
+  <header class="header-text" >
+  Get an Estimate for Workspace
+  </header>
+</div>
 
 
 <body>
   <div class="title-text">
-    <div class="title-text name" appContrast>Post Your Requirements</div>
-    <div class ="title-text quote" appContrast>
+    <div class="title-text name" >Post Your Requirements</div>
+    <div class ="title-text quote" >
       Please fill the form below to receive
       a quote for workspace. Please add all
       the details required.
@@ -14,34 +16,52 @@ Get an Estimate for Workspace
   </div>
 
     <form class="form-data form-style" (ngSubmit)="onSubmit()">
-      <div class="form-data text">
-        <div class="form-data header-text">Contact details</div>
-        <div class="form-data quote">Please fill your information so we can get in touch with you.</div>
-      </div>
-      <div>
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" [(ngModel)]="formData.name" required>
-      </div>
-      <div>
-        <label for="phone">Phone</label>
-        <input type="tel" id="phone" name="phone" [(ngModel)]="formData.phone" required>
-      </div>
-      <div>
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" [(ngModel)]="formData.email" required>
-      </div>
+  <div class="form-data text">
+    <div class="form-data header-text">Contact details</div>
 
-      <div>
-        <label for="date">Date</label>
-        <input type="date" id="date" name="date" [(ngModel)]="formData.date" required>
-      </div>
-    </form>
+    <div class="form-data quote">Please fill your information so we can get in touch with you.</div>
+  </div>
+  <br>
+  <app-send-info-input
+    id="name"
+    label="Name"
+    type="text"
+    placeholder="Your Name"
+    [(value)]="formData.name">
+  </app-send-info-input>
+  
+  <app-send-info-input
+    id="phone"
+    label="Phone"
+    type="tel"
+    placeholder="8 (123) 456-78-90"
+    [(value)]="formData.phone">
+  </app-send-info-input>
+  
+  <app-send-info-input
+    id="email"
+    label="Email"
+    type="email"
+    placeholder="Your Email"
+    [(value)]="formData.email">
+  </app-send-info-input>
+  
+  <app-send-info-input
+    id="date"
+    label="Date"
+    type="date"
+    placeholder="Select date"
+    [(value)]="formData.date">
+  </app-send-info-input>
+</form>
 
 </body>
 
 
 <footer class="footer-text">
-  <button type="submit">Submit</button>
-
+  <app-send-info-button
+    text="Submit"
+    type="submit"
+    (clicked)="onSubmit()">
+  </app-send-info-button>
 </footer>
-

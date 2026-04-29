@@ -6,7 +6,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
   templateUrl: './send-info-button.html',
   styleUrl: './send-info-button.css'
 })
-export class SendInfoButtonComponent {
+export class SendInfoButton {
 
   @Input() text: string = 'Submit';
   @Input() type: 'button' | 'submit' | 'reset' = 'button';

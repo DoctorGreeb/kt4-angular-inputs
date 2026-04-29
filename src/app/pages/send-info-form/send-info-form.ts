@@ -1,16 +1,14 @@
 import { Component } from '@angular/core';
-import { Contrast } from '../../directives/contrast';
 import { FormsModule } from '@angular/forms';
 import { form } from '@angular/forms/signals';
 
-import { SendInfoButtonComponent } from '../../components/send-info-button/send-info-button';
-import { SendInfoInputСomponent } from '../../components/send-info-input/send-info-input';
-
+import { SendInfoButton } from '../../components/send-info-button/send-info-button';
+import { SendInfoInput } from '../../components/send-info-input/send-info-input';
 
 @Component({
   selector: 'app-send-info-form',
   standalone: true,
-  imports: [FormsModule, Contrast, SendInfoButtonComponent, SendInfoInputComponent],
+  imports: [FormsModule, SendInfoButton, SendInfoInput],
   templateUrl: './send-info-form.html',
   styleUrl: './send-info-form.css',
 })
