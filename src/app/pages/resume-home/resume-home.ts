@@ -21,4 +21,7 @@ export class ResumeHome {
 
     URL.revokeObjectURL(url);
   }
+    openLink(url: string) {
+    window.open(url, '_blank');
+  }
 }

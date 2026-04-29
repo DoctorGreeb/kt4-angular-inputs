@@ -23,6 +23,13 @@ a:visited {
   color: black;
 }
 
+.resume-block {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
 .resume-text {
   display: flex;
   flex-direction: column;
@@ -56,10 +63,18 @@ h2 {
   font-size: 30px;
   width: 55%;
 }
-h2, p, a {
+h2, .text-min, a, p, .post-date, .post-descript, .post-title {
   font-family: Heebo;
   color: rgba(33, 36, 61, 1);
   letter-spacing: -0.03em;
+}
+
+.text-min, .post-date, .post-descript {
+  font-size: 13px;
+}
+
+.post-title {
+  font-weight: bold;
 }
 
 .download-button {
@@ -81,4 +96,77 @@ h2, p, a {
   max-width: 1000px;
   margin: 0 auto;
   padding: 0 20px;
+}
+
+.recent-posts {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: #EDF7FA;
+  padding:0 1rem 1rem 1rem;
+}
+
+.recent-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.post {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: white;
+  padding: 1rem;
+    border-radius: 3px;
+}
+
+.date-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.featured-works {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: #EDF7FA;
+  padding:0 1rem 1rem 1rem;
+}
+
+.work {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: white;
+  padding: 1rem;
+    border-radius: 3px;
+}
+
+footer img {
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.footer-container {
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+.footer-description {
+  font-size: 13px;
 }
