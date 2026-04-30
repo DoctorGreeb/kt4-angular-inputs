@@ -58,10 +58,25 @@
     </div>
   </div>
   <div class="featured-works">
-    <div class="work"></div>
-    <div class="work"></div>
-    <div class="work"></div>
+  <p>Featured Works</p>
+  
+  <div class="works-grid">
+    @for (work of featuredWorks; track work.id) {
+      <div class="work-card">
+        <img [src]="work.main_img" [alt]="work.title" class="work-image">
+        
+        <div class="work-info">
+          <h3>{{ work.title }}</h3>
+          <p class="work-year">{{ work.year }}</p>
+          
+          <a [routerLink]="['/resume/works', work.id]" class="view-project">
+            View Project →
+          </a>
+        </div>
+      </div>
+    }
   </div>
+</div>
 </div>
 
 <div class="footer-container">

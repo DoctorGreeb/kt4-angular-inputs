@@ -1,7 +1,26 @@
 <header>
   <div class="buttons-resume">
     <a routerLink="/">Home</a>
-    <a routerLink="/resume/works">Works</a>
+    <a routerLink="/resume/works" class="active">Works</a>
   </div>
 </header>
-<p>Works</p>
+
+<main>
+  <h1>Works</h1>
+  
+  <div class="works-grid">
+    <div *ngFor="let work of works" class="work-card">
+      <img [src]="work.main_img" [alt]="work.title" class="work-image">
+      
+      <div class="work-info">
+        <h2>{{ work.full_title || work.title }}</h2>
+        <p class="work-year">{{ work.year }}</p>
+        <p class="work-text">{{ work.text}}</p>
+        
+        <a [routerLink]="['/resume/works', work.id]" class="view-project">
+          View Project →
+        </a>
+      </div>
+    </div>
+  </div>
+</main>
