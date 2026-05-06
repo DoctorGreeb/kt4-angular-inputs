@@ -1,0 +1,79 @@
+<div class="container">
+  <header>
+    <div class="buttons-resume">
+        <a routerLink="/resume">Home</a>
+        <a routerLink="/resume/works">Works</a>
+      </div>
+  </header>
+
+  <main>
+    <div class="work-block">
+      <div class="work-text">
+        <div class="work-id">
+          <h1>{{ work?.title }}</h1>
+          <p class="work-year">{{ work?.year }}</p>
+          <p class="work-text">{{ work?.text }}</p>
+        </div>
+
+        <div class="work-content">
+          <img [src]="work?.main_img" [alt]="work?.title" />
+        </div>
+
+        <div class="work-headings">
+
+          <div class="heading-1">
+            @for (block of work?.content; track block; let i = $index) {
+              @if (i < 4) {
+                @if (block[0] === 'h1') {
+                  <h1>{{ block[1] }}</h1>
+                }
+                @if (block[0] === 'img') {
+                  <img [src]="block[1]" [alt]="work?.title" />
+                }
+                @if (block[0] === 'h2') {
+                  <h2>{{ block[1] }}</h2>
+                }
+                @if (block[0] === 'text') {
+                  <p>{{ block[1] }}</p>
+                }
+              }
+            }
+          </div>
+
+          <div class="heading-2">
+            @for (block of work?.content; track block; let i = $index) {
+              @if (i >= 4) {
+                @if (block[0] === 'h1') {
+                  <h1>{{ block[1] }}</h1>
+                }
+                @if (block[0] === 'img') {
+                  <img [src]="block[1]" [alt]="work?.title" />
+                }
+                @if (block[0] === 'h2') {
+                  <h2>{{ block[1] }}</h2>
+                }
+                @if (block[0] === 'text') {
+                  <p>{{ block[1] }}</p>
+                }
+              }
+            }
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div class="footer-container">
+    <footer>
+      <img src="https://cdn-icons-png.flaticon.com/128/2504/2504903.png" alt="facebook" (click)="openLink('https://facebook.com')" />
+      <img src="https://cdn-icons-png.flaticon.com/128/1384/1384063.png" alt="instagram" (click)="openLink('https://instagram.com')" />
+      <img src="https://cdn-icons-png.flaticon.com/128/5969/5969020.png" alt="x" (click)="openLink('https://x.com')" />
+      <img src="https://cdn-icons-png.flaticon.com/128/3991/3991775.png" alt="linkedin" (click)="openLink('https://linkedin.com')" />
+      <img src="https://cdn-icons-png.flaticon.com/128/2111/2111646.png" alt="telegram" (click)="openLink('https://telegram.org')" />
+      <img src="https://cdn-icons-png.flaticon.com/128/3991/3991999.png" alt="kakaotalk" (click)="openLink('https://kakaotalk.com')" />
+    </footer>
+    <div class="footer-description">
+      <p>© 2026 Greeb Cat.erpillar. All rights reserved</p>
+    </div>
+  </div>
+</div>

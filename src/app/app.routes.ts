@@ -8,6 +8,7 @@ import { SingleUserPosts } from './pages/single-user-posts/single-user-posts';
 import { SendInfoForm } from './pages/send-info-form/send-info-form';
 import { ResumeHome } from './pages/resume-home/resume-home';
 import { ResumeWork } from './pages/resume-work/resume-work';
+import { ResumeWorkDetail } from './pages/resume-work-detail/resume-work-detail';
 
 export const routes: Routes = [
 
@@ -20,6 +21,7 @@ export const routes: Routes = [
   { path: 'form', component: SendInfoForm },
   { path: 'resume', component: ResumeHome },
   { path: 'resume/works', component: ResumeWork },
-
+  { path: 'resume/works/:id', component: ResumeWork },
+  { path: 'resume/works/work/:id', component: ResumeWorkDetail },
 ];
 

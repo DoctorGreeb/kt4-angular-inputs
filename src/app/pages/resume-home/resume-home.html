@@ -1,7 +1,7 @@
 <div class="container">
   <header>
     <div class="buttons-resume">
-      <a routerLink="/">Home</a>
+      <a routerLink="/resume">Home</a>
       <a routerLink="/resume/works">Works</a>
     </div>
   </header>
@@ -59,18 +59,18 @@
   </div>
   <div class="featured-works">
   <p>Featured Works</p>
-  
+
   <div class="works-grid">
     @for (work of featuredWorks; track work.id) {
       <div class="work-card">
         <img [src]="work.main_img" [alt]="work.title" class="work-image">
-        
+
         <div class="work-info">
           <h3>{{ work.title }}</h3>
           <p class="work-year">{{ work.year }}</p>
-          
-          <a [routerLink]="['/resume/works', work.id]" class="view-project">
-            View Project →
+
+          <a class="view-button" [routerLink]="['/resume/works', work.id]" class="view-project">
+            View Project
           </a>
         </div>
       </div>
